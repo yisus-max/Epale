@@ -1,0 +1,78 @@
+body{background-image: url(https://img.freepik.com/vector-premium/fondo-abstracto-onda-blanca-gris-diseno-suave-trabajo-grafico_41084-468.jpg?w=740); 
+background-size: 1380px;}
+
+
+form{width: 400px;
+background-image: url(https://img.freepik.com/vector-premium/fondo-abstracto-blanco-estilo-papel-3d_23-2148403778.jpg?w=740);
+
+   
+padding: 30px;
+margin: auto; margin-top: 100px;
+border-radius: 20px; font-family:Arial, Helvetica, sans-serif;
+backface-visibility: visible;
+border-style: groove;
+border-style:solid;
+}
+
+form h4{
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-size: 10px;
+   text-align: center;
+   justify-content: center;
+   border-radius: 10px;
+   color:#19191d;
+   font-size: 40px;
+}
+
+.form-label{width: 100%;
+   background: #12c2e9;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
+;
+padding: 5px;
+border-radius: 45px;
+margin-bottom: 15px;
+color: rgb(95, 9, 91); 
+text-align: center;
+border: 1px solid rgb(236, 233, 236);
+font-family:fantasy ;
+font-variant: small-caps;
+font-size: 20px;
+text-decoration-color: antiquewhite;
+text-justify: kashida;
+}
+
+
+form p{ height: 2px;
+text-align: start;
+font-size: 15px;
+width: 5px;
+border-width: 20px; 
+border-top: #974d33;
+font-size: medium;
+color: antiquewhite;}
+
+.btn{background: #FFEFBA;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
+   
+   
+width: 100%;
+border-radius: 10px;
+border-color: rgb(12, 20, 20);
+color: #19191d;}
+
+.form-block{background-color: #974d33;}
+
+.form-switch{color:rgb(88, 16, 16);
+   color-scheme: red;
+text-align:start;
+border-bottom: 45px;
+border-top: 45px;
+border-style: hidden;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-variant: small-caps;
+font-synthesis: weight;}
+

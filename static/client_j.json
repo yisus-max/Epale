@@ -1,0 +1,4 @@
+{"web":{"client_id":"622955328798-77kk3466cluueh8a77pu386nhvobseau.apps.googleusercontent.com",
+"project_id":"flask-proyect-366400","auth_uri":"https://accounts.google.com/o/oauth2/auth",
+"token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":
+"https://www.googleapis.com/oauth2/v1/certs","redirect_uris":["http://127.0.0.1:200/google/authorized"]}}

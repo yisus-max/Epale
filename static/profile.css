@@ -1,0 +1,11 @@
+body{background-image: url("muro.jpg");}
+.header{text-align: center; height: 300px; padding: 12px; background-image: url("muro.jpg")}
+.avatar { width: 140px; height: 120px; border-radius: 60%;}
+.user-name{text-decoration-style: solid; font-size:  16; text-decoration:dashed; margin-top: 25px; color: black;}
+.socials{text-align: left ; margin: 5px; line-break: anywhere; }
+.socials li {color: antiquewhite ;display: inline ; margin: 5px; text-align:justify;}
+a{text-decoration-style: dotted ; color: antiquewhite; text-align: start;}
+a:hover{color: antiquewhite;}
+.icon {width: 30px; height: 20px; display: inline-block; background-size: cover;}
+.user {background-image: url("user.png"); justify-content: left; justify-items: left;}
+.email{background-image: url("gmail.png");}

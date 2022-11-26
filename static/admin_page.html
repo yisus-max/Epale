@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+
+    <meta charset="UTF-8">
+    <title class= "p-0"> Admin page </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.2/css/bootstrap.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+   
+    
+
+
+<body>
+  
+
+     {%from "macro.html" import render_field %}
+     
+     {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul> 
+          {% for message in messages %}
+          
+          <div class="alert alert-success" role="alert">
+            {{message}}
+          </div>
+          
+          {% endfor %}
+        </ul>
+       {% endif %}
+     {% endwith %}
+   
+
+    
+   
+  
+     
+     
+   {% for postx in postx %}
+     
+    
+
+     <div class ="card">
+       <img 
+         class = "avatar"
+          src = "{{ image_file}}" width="80x80" height="100x100">
+        <div class = "card-header" >
+
+          <strong>Name:</strong>
+           <h2> {{postx.name}} </h2>
+        </div>    
+
+        <div class = "card-text" >
+          
+              <strong>Username:</strong>
+              <h2> {{postx.username}} </h2>
+              <br>
+              <strong>Member datasize:</strong>
+              <h2> {{postx.create_date}} </h2>
+              <br>
+              <a href = "mailto: {{postx.email}} " Correo electronico:>  {{postx.email}} </a>
+      
+
+         </div>   
+      <br><br>
+      <br><br>
+      <br><br>
+      <a href = "{{ url_for('logout')}}" class="btn btn-secondary btn-sm">Logout</a>    
+      <br>
+
+
+  {% if postx.id == current_user.id or current_user.id == 1 %}  
+
+   <form  action = "/admin_page/{{ post.id }}/{{current_user.username}} " method = "POST", enctype="multipart/form-data">
+
+        <input type="hidden" name = "csrf_token" value="{{ csrf_token() }}" />
+
+
+         <div>
+            
+            {{render_field(form.username , class = 'form-control form-control-sm', value = post.username  , placeholder = 'Username')}}<br>
+
+         </div>
+         
+      
+         <div>
+            
+            {{render_field(form.email , class = 'form-control form-control-sm' , value = post.email, placeholder = 'Email')}}<br>
+
+         </div>
+
+         <div>
+            
+          {{render_field(form.picture , class = 'form-control form-control-sm' , value = post.picture_file, placeholder = 'Picture')}}<br>
+ 
+       </div>
+           
+             
+         <button type="submit" class="btn btn-primary">Enviar</button>     
+         <br><br>
+
+        
+
+         {% if form.error %}
+         <ul> {% for error in form.errors %} 
+            <li> {{error}} </li>
+           {% endfor %} 
+         </ul>
+         {% endif %}
+    
+   {% endif %}
+   {% endfor %}
+
+
+
+
+   </form>   
+      
+   </body>  

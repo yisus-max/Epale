@@ -1,0 +1,47 @@
+body{
+    background: #283048;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+form{display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-top-color: #ED4264;
+    text-emphasis-color: red; width: 200 ;
+}
+    
+
+.btn{background-color: rgb(124, 129, 122);
+padding-bottom: 12px;
+text-emphasis-color: red;
+text-decoration: double;}
+
+.text-start{text-align: end; text-justify: inter-word;
+}
+
+.form-group{padding: 4px;
+text-align: start;
+text-decoration: aquamarine;
+text-decoration-color: antiquewhite;
+justify-content: center;
+text-shadow: 20cm;
+enable-background: 5%;
+text-anchor: middle;}
+
+
+
+.text-center{
+text-align: end; justify-content: end;
+justify-items: end;}
+
+.p-0{text-align: start;
+justify-content: start;
+justify-items: start;}
+
+.img{justify-content: end ; image-rendering: pixelated;}
+
+footer{justify-content: end;
+justify-items: center;
+image-resolution: 200x300 ;}

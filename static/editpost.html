@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+
+    <meta charset="UTF-8">
+    <title class= "p-0"> Blog Posted! </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.2/css/bootstrap.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   
+    
+  
+  <body>
+
+    {{ ckeditor.load() }}
+
+    {%from "macro.html" import render_field %}
+     
+     {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul> 
+          {% for message in messages %}
+          
+          <div class="alert alert-success" role="alert">
+            {{message}}
+          </div>
+          
+          {% endfor %}
+        </ul>
+       {% endif %}
+     {% endwith %}
+  
+
+   <div class="shadow p-3 mb-5 bg-body rounded">
+
+    <form  method="POST" , action = ''>
+
+        <input type="hidden" name = "csrf_token" value="{{ csrf_token() }}" />
+
+         <h1> Blog Post! </h1> <br>
+
+         <div>
+            
+            {{render_field(form.title , class = 'form-control form-control-lg' , placeholder = 'Wherever')}}<br>
+
+         </div>
+         
+      
+         <div>
+            
+            {{render_field(form.slug , class = 'form-control form-control-sm' , placeholder = 'Slug')}}<br>
+
+         </div>
+
+         
+         <div>
+            
+            {{render_field(form.content , class = 'form-control ' , placeholder = 'Wherever', rows = '6')}}<br>
+            By:{{current_user.username}}<br><br>
+            {{render_field(form.submit, class ='btn btn-primary btn-lg')}}
+            
+
+
+         </div>
+
+    </form>
+
+    {{ ckeditor.load() }}
+    {{ ckeditor.config(name = 'content') }}
+
+    </div>     
+    
+  
+  
+  
+
+
+<body>
